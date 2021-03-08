@@ -1,0 +1,31 @@
+{
+	"dialogue": [
+		{
+			"talkingChar": "Beto",
+			"leftChar": "Beto_Neutral",
+			"rightChar": "Rebeca_Neutral",
+			"centerChar": null,
+			"background": null,
+			"music": null,
+			"line": "Olá, saberia onde fica a saída?"
+		},
+		{
+			"talkingChar": "Rebeca",
+			"leftChar": "Beto_Neutral",
+			"rightChar": "Rebeca_Neutral",
+			"centerChar": null,
+			"background": null,
+			"music": null,
+			"line": "Claro! Fica logo ali na esquerda!"
+		},
+		{
+			"talkingChar": "Beto",
+			"leftChar": "Beto_Neutral",
+			"rightChar": "Rebeca_Neutral",
+			"centerChar": null,
+			"background": null,
+			"music": null,
+			"line": "Muito obrigado"
+		}
+	]
+}
