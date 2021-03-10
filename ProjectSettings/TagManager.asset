@@ -8,6 +8,7 @@ TagManager:
   - DialoguePanel
   - DialogueUIContainer
   - Managers
+  - Inventory Panel
   layers:
   - Default
   - TransparentFX

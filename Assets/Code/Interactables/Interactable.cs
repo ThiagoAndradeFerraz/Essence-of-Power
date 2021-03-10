@@ -32,21 +32,17 @@ public abstract class Interactable : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("e");
-            //InteractionTalk();
+            InteractionTalk();
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            //InteractionUse();
-            Debug.Log("r");
+            InteractionUse();
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            //InteractionInventory();
-            Debug.Log("t");
+            InteractionInventory();
         }
     }
-
 
     protected void DetectPlayer()
     {
@@ -56,7 +52,6 @@ public abstract class Interactable : MonoBehaviour
             isClose = true;
             if (isClose == true && wasClose == false)
             {
-                Debug.Log("perto");
                 uiManager.ShowInteractionOptions(true);
             }
             CheckInput();
@@ -77,4 +72,9 @@ public abstract class Interactable : MonoBehaviour
     {
         DetectPlayer();
     }
+
+    // Input actions...
+    protected abstract void InteractionTalk();
+    protected abstract void InteractionUse();
+    protected abstract void InteractionInventory();
 }

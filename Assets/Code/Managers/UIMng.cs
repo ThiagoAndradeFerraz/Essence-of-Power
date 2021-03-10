@@ -17,6 +17,10 @@ public class UIMng : MonoBehaviour
     [SerializeField] private Transform interactionPanel;
     [SerializeField] private Text txtNameIntr, txtOptions;
 
+    [Header("Inventory UI")]
+    [SerializeField] private Transform inventoryPanel;
+    [SerializeField] private Button[] inventorySlots;
+
     private void GetUiElements()
     {
         #region MAIN CONTAINERS
@@ -43,11 +47,22 @@ public class UIMng : MonoBehaviour
         txtOptions = interactionPanel.GetChild(1).GetComponent<Text>();
         #endregion
 
+        #region INVENTORY COMPONENTS
+        inventoryPanel = GameObject.FindGameObjectWithTag("Inventory Panel").GetComponent<Transform>();
+        
+        for(int i = 0; i < inventoryPanel.childCount; i++)
+        {
+            inventorySlots[i] = inventoryPanel.GetChild(i).GetComponent<Button>();
+        }
+        #endregion
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        inventorySlots = new Button[7];
+
         GetUiElements();
     }
 
